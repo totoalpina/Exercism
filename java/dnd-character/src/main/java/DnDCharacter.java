@@ -1,39 +1,61 @@
+import java.util.Random;
+
 class DnDCharacter {
+    Random rand = new Random();
+    private int strength;
+    private int dexterity;
+    private int constitution;
+    private int intelligence;
+    private int wisdom;
+    private int charisma;
+    private int hitpoints;
+
+    public DnDCharacter() {
+        this.strength = ability();
+        this.dexterity = ability();
+        this.constitution = ability();
+        this.intelligence = ability();
+        this.wisdom = ability();
+        this.charisma = ability();
+        this.hitpoints = this.modifier(this.getConstitution()) + 10;
+    }
+
 
     int ability() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return rand.nextInt(6) + 1 + rand.nextInt(6) + 1 + rand.nextInt(6) + 1;
     }
 
     int modifier(int input) {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        int result = input - 10;
+        return (int) Math.floorDiv(result, 2);
     }
 
     int getStrength() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return this.strength;
     }
 
     int getDexterity() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return this.dexterity;
     }
 
     int getConstitution() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return this.constitution;
     }
 
     int getIntelligence() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return this.intelligence;
     }
 
     int getWisdom() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return this.wisdom;
     }
 
     int getCharisma() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return this.charisma;
     }
 
     int getHitpoints() {
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+        return this.hitpoints;
     }
 
 }
