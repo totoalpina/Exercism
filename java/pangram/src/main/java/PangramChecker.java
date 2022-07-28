@@ -3,8 +3,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class PangramChecker {
-    public final static int ALPHABET_COUNT = 26;
-
+    public final static int ALPHABET_COUNT =26;
     public boolean isPangram(String input) {
         if (input == null) {
             return false;

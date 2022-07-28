@@ -17,13 +17,11 @@ public class GrainsTest {
         assertEquals(new BigInteger("1"), result);
     }
 
-
     @Test
     public void countAtSquare2() {
         BigInteger result = grains.grainsOnSquare(2);
         assertEquals(new BigInteger("2"), result);
     }
-
 
     @Test
     public void countAtSquare3() {
@@ -31,13 +29,11 @@ public class GrainsTest {
         assertEquals(new BigInteger("4"), result);
     }
 
-
     @Test
     public void countAtSquare4() {
         BigInteger result = grains.grainsOnSquare(4);
         assertEquals(new BigInteger("8"), result);
     }
-
 
     @Test
     public void countAtSquare16() {
@@ -45,20 +41,17 @@ public class GrainsTest {
         assertEquals(new BigInteger("32768"), result);
     }
 
-
     @Test
     public void countAtSquare32() {
         BigInteger result = grains.grainsOnSquare(32);
         assertEquals(new BigInteger("2147483648"), result);
     }
 
-
     @Test
     public void countAtSquare64() {
         BigInteger result = grains.grainsOnSquare(64);
         assertEquals(new BigInteger("9223372036854775808"), result);
     }
-
 
     @Test
     public void errorOnNullBoardSize() {
@@ -71,7 +64,6 @@ public class GrainsTest {
             .hasMessage("square must be between 1 and 64");
     }
 
-
     @Test
     public void errorOnNegativeBoardSize() {
         IllegalArgumentException expected =
@@ -83,7 +75,6 @@ public class GrainsTest {
             .hasMessage("square must be between 1 and 64");
     }
 
-
     @Test
     public void errorOnExcessiveBoardSize() {
         IllegalArgumentException expected =
@@ -94,7 +85,6 @@ public class GrainsTest {
         assertThat(expected)
             .hasMessage("square must be between 1 and 64");
     }
-
 
     @Test
     public void totalNumberOfGrainsOnABoard() {
