@@ -12,10 +12,9 @@ class ResistorColorDuo {
         return Integer.parseInt(Arrays.stream(colors).limit(2)
                 .map(color -> getIndexColorAsString(color))
                 .collect(Collectors.joining("")));
-
     }
 
-    private String getIndexColorAsString(String color){
+    private String getIndexColorAsString(String color) {
         return Integer.toString(listOfColors.indexOf(color));
     }
 }

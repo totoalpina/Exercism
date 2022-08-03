@@ -35,5 +35,4 @@ class Grains {
         }
         return totalGrainsOnBoard;
     }
-
 }
