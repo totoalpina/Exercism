@@ -32,14 +32,14 @@ class BirdWatcher {
     public int getCountForFirstDays(int numberOfDays) {
         if (numberOfDays > birdsPerDay.length) {
             return Stream.of(birdsPerDay)
-                    .flatMapToInt(Arrays::stream)
-                    .reduce(0, Integer::sum);
-        }
-        
-        return Stream.of(birdsPerDay)
                 .flatMapToInt(Arrays::stream)
-                .limit(numberOfDays)
-                .reduce(0, (x, y) -> x + y);
+                .reduce(0, Integer::sum);
+        }
+
+        return Stream.of(birdsPerDay)
+            .flatMapToInt(Arrays::stream)
+            .limit(numberOfDays)
+            .reduce(0, (x, y) -> x + y);
     }
 
     public int getBusyDays() {
@@ -52,3 +52,5 @@ class BirdWatcher {
         return count;
     }
 }
+
+
