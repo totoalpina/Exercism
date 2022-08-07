@@ -4,28 +4,26 @@ public class ElonsToyCar {
     private int batteryPercentage;
 
     public ElonsToyCar() {
-        this.distanceDriven = 0;
-        this.batteryPercentage = 100;
+        distanceDriven = 0;
+        batteryPercentage = 100;
     }
 
     public int getDistanceDriven() {
-        return this.distanceDriven;
+        return distanceDriven;
     }
 
     public int getBatteryPercentage() {
-        return this.batteryPercentage;
+        return batteryPercentage;
     }
 
     public void setDistanceDriven() {
         if (getBatteryPercentage() > 0) {
-            this.distanceDriven += 20;
-        } else {
-            this.distanceDriven += 0;
-        }
+            distanceDriven += 20;
+    }
     }
 
     public void setBatteryPercentage() {
-        this.batteryPercentage -= 1;
+        batteryPercentage -= 1;
     }
 
     public static ElonsToyCar buy() {
