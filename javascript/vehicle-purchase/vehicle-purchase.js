@@ -11,7 +11,10 @@
  * @returns {boolean} whether a license is required
  */
 export function needsLicense(kind) {
-  throw new Error('Please implement the needsLicense function');
+  if (kind === "car" || kind === "truck") {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -23,7 +26,9 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
-  throw new Error('Please implement the chooseVehicle function');
+  return option1 < option2
+    ? `${option1} is clearly the better choice.`
+    : `${option2} is clearly the better choice.`;
 }
 
 /**
@@ -35,5 +40,22 @@ export function chooseVehicle(option1, option2) {
  * @returns {number} expected resell price in the dealership
  */
 export function calculateResellPrice(originalPrice, age) {
-  throw new Error('Please implement the calculateResellPrice function');
+  if (age < 3) {
+    return originalPrice * 0.8;
+  }
+
+  if (age >= 3 && age <= 10) {
+    return originalPrice * 0.7;
+  }
+
+  if (age > 10) {
+    return originalPrice * 0.5;
+  }
+  if (age < 0) {
+    return 0;
+  }
+
+  if (age === 0) {
+    return originalPrice;
+  }
 }
